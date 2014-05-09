@@ -11,7 +11,7 @@ full_date<-strptime(dates,"%d/%m/%Y %H:%M:%S")
 # add in as extra column
 data<-cbind(full_date, days)
 # plot required data
-plot(data$full_date, as.numeric(as.character(data$Global_active_power)), type ="l", xlab="",ylab="Global Active Power (kilowatts)")
+plot(data$full_date, as.numeric(as.character(data$Global_active_power)),cex.lab = 0.6,cex.axis=0.6,type ="l", xlab="",ylab="Global Active Power (kilowatts)")
 # and copy to file
 dev.copy(png, file = "plot2.png", width=480, height=480, units = "px")
 dev.off()
